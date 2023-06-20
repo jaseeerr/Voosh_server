@@ -22,11 +22,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   cors({
-    origin: ['http://localhost:1234',
-              'https://16.170.232.111',
-              'http://16.170.232.111',
-              '16.170.232.111',
-              'cyberkraft.online'
+    origin: [
+      'http://localhost:1234',
+      'https://16.170.232.111',
+      'http://16.170.232.111',
+      '16.170.232.111',
+      'cyberkraft.online'
   ],
     methods: ['GET', 'POST', 'PUT', 'PATCH'],
     credentials: true,
