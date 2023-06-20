@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   cors({
     origin: ['http://localhost:1234',
-              'https://cyberkraft.online',
-              'http://cyberkraft.online',
+              'https://16.170.232.111',
+              'http://16.170.232.111',
               'cyberkraft.online'
   ],
     methods: ['GET', 'POST', 'PUT', 'PATCH'],
