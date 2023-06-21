@@ -23,12 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   cors({
     origin: [
+      'http://cyberkraft.online',
+      'http://cyberkraft.online',
       'http://localhost:1234',
       'https://16.170.232.111',
       'http://16.170.232.111',
       '16.170.232.111',
       'cyberkraft.online',
-      'https://e734-103-191-187-6.ngrok-free.app'
+      'https://3d11-103-214-235-23.ngrok-free.app'
   ],
     methods: ['GET', 'POST', 'PUT', 'PATCH'],
     credentials: true,
