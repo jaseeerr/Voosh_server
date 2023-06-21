@@ -5,7 +5,8 @@ const signupSchema = new Schema({
     name:String,
     email:String,
     phone:String,
-    password:String
+    password:String,
+    guser:Boolean
     
 })
 

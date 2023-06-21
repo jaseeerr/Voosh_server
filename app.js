@@ -27,7 +27,8 @@ app.use(
       'https://16.170.232.111',
       'http://16.170.232.111',
       '16.170.232.111',
-      'cyberkraft.online'
+      'cyberkraft.online',
+      'https://e734-103-191-187-6.ngrok-free.app'
   ],
     methods: ['GET', 'POST', 'PUT', 'PATCH'],
     credentials: true,

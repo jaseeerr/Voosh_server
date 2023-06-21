@@ -6,6 +6,9 @@ const auth = require("../auth/Auth")
 /* POST sign up. */
 router.post('/add-user', userController.signup)
 
+/* POST sign up. */
+router.post('/add-google-user', userController.googleSignup)
+
 /* POST login. */
 router.post('/login-user', userController.login)
 

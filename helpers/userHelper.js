@@ -34,7 +34,8 @@ module.exports ={
                                 name: udata.name,
                                 email: udata.email,
                                 phone:udata.phone,
-                                password: pass
+                                password: pass,
+                                guser:false
                                 })
             
                                             user.save().then(() => {
@@ -50,6 +51,45 @@ module.exports ={
                
 
             })
+        })
+    },
+    googleSignup:(udata)=>{
+
+        return new Promise((resolve, reject) => {
+
+            User.findOne({email:udata.email}).then((data)=>{
+
+                if(data)
+                {
+                    resolve(data)
+                }
+                else
+                {
+                    const user = new User({
+    
+                        name: udata.name,
+                        email: udata.email,
+                        phone: null,
+                        password: null,
+                        guser:true
+                        })
+        
+                                    user.save().then((data1) => {
+        
+                                
+                                        
+                                        resolve(data1)
+                                    })
+                }
+
+                
+            })
+
+            
+            
+
+            
+
         })
     },
 
@@ -84,6 +124,11 @@ module.exports ={
     },
 
     addOrder:(udata,pdata)=>{
+
+        if(udata.guser)
+        {
+            udata.phone = udata.email
+        }
 
 
 

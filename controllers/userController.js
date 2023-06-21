@@ -14,6 +14,26 @@ module.exports = {
         })
     },
 
+    googleSignup:(req,res)=>{
+        console.log(req.body)
+
+        userHelper.googleSignup(req.body).then((response)=>{
+
+            const data1 = JSON.parse(JSON.stringify(response));
+               const token = jwt.sign(data1,process.env.ACCESS_TOKEN_SECRET)
+
+    
+            console.log(token)
+            const data = {
+                token:token,
+                success:true
+            }
+            res.json(data)
+
+        })
+
+    },
+
     login:(req,res)=>{
 
         userHelper.login(req.body).then((response)=>{
